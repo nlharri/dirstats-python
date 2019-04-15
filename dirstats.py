@@ -89,4 +89,4 @@ if __name__ == "__main__":
     barplot = plt.bar(range(len(file_ext_head)), file_ext_numbers_head, color='#4CC4FF')
     plt.ylim([0, max(file_ext_numbers_head)])
     xticks = plt.xticks(range(len(file_ext_head)), file_ext_names_head, rotation=45, color="#2BD5E1")
-    plt.savefig('foo.png', bbox_inches='tight')
+    plt.savefig('dirstats.png', bbox_inches='tight')
