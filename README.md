@@ -2,3 +2,4 @@
 
 This Python script generates statistics of file extensions of a provided directory, or the current directory, if it is not provided.
 
+![Animation of dirstats](dirstats.gif "dirstats")
