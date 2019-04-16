@@ -16,7 +16,6 @@
 #   - file name extension distribution histogram of the 20 most frequent file
 #     name extensions
 
-
 import sys
 import os
 import matplotlib.pyplot as plt
@@ -44,13 +43,6 @@ def process_folder(path):
                 folder_stats = process_folder(full_file_path)
                 current_stats += folder_stats
     return current_stats
-
-def file_ext_pd_aggregation_function(x):
-    file_ext_sum = {
-        'file_ext_number': x['file_ext_number'].sum()
-    }
-    return pd.Series(file_ext_sum, index=['file_ext_number'])
-
 
 if __name__ == "__main__":
     path = "./" if len(sys.argv) < 2 else sys.argv[1]
@@ -82,7 +74,7 @@ if __name__ == "__main__":
         by = ["file_ext_number"],
         ascending = False)
 
-    file_ext_head = file_ext_count_pd_dataframe.head(30)
+    file_ext_head = file_ext_count_pd_dataframe.head(20)
     file_ext_numbers_head = file_ext_head['file_ext_number'].tolist()
     file_ext_names_head = file_ext_head.index.tolist()
 
